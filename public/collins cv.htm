@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC " -//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+                   <html>
+                    <head>
+                        <meta http-equiv="Content-Type" content="text/html;charset=utf-16" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"83635f2ecf","applicationID":"69139231","transactionName":"NQBbY0FWWBBYVk1fDgxKdGFwGHIMWkBUUw8WJlZZR0VZD1VQSxklDRJXW1xWUg==","queueTime":0,"applicationTime":436,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"83635f2ecf",applicationID:"69139231"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(9),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!P++){var t=M.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+M.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+M.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,y="addEventListener",h="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1215.min.js"},T=w&&b&&b[y]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:T,userAgent:s,disabled:E};if(!E){t(1),t(7),g[y]?(g[y]("DOMContentLoaded",o,l(!1)),m[y]("load",r,l(!1))):(g[h]("onreadystatechange",i),m[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var P=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+                        <title>COLLINS KIPTOO</title><style type="text/css" id="static">
+        @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700|Source+Sans+Pro:400,700|Merriweather:400,700|DM+Serif+Display');
+        html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent}
+        body {text-align:left; font-feature-settings:"liga" 0; -moz-font-feature-settings:"liga" off}
+		a[href^="tel"] { color: inherit; text-decoration: none; }
+        div#document { width:612px;}
+        div#document .displaytable { display:table; width:100%; table-layout:fixed; border-top:1px solid #d0d0d0; padding:5px 0;}
+        div#document .displaytablecell { display:table-cell; }
+        div#document .displaytablecell:first-child {width:20px; position:relative; top:2px;}
+        div#document ul, div#document li {list-style-type:disc; margin:0 0 0 7px; padding:0;}
+        div#document .paddedline {display:block}
+		div#document .paddedline.circle-align { line-height: 14px; }
+        div#document .txtBold {font-weight:700; text-transform: uppercase; }
+        div#document  {color:#000; line-height:16px; font-variant-ligatures:none;}
+        div#document .datesWrapper {font-style:italic;}
+		div#document .space {padding-right:10px;}
+        div#document .parentContainer{display:table;table-layout:fixed; width:100%;}
+        div#document .heading {font-family:'DM Serif Display' !important; font-weight:400; color:#305fec; width:100%; max-width:100%; text-transform:capitalize;}
+        div#document .left-box {width:63%; display:table-cell; padding-right:15px; vertical-align:top;padding-bottom:50px; box-sizing:border-box;}
+        div#document .right-box {width:37%; display:table-cell; padding-left:15px; box-sizing:border-box; vertical-align:top; padding-bottom:50px } /*padding bottom used for making extra space for drag area*/
+        <!--div#document .right-box .section.notdraggable{margin-top:0;} -->
+        div#document .right-box .heading{float:none; }
+		div#document div.firstparagraph{margin-top:0;}
+        div#document .right-box .singlecolumn{width: auto !important;}
+        div#document .paragraph {clear:both; position:relative;}
+        div#document .sectiontitle{padding-top:1px; color:#305fec;}
+        div#document .right-box .section {border:1px solid #d0d0d0; padding:23px 18px 27px; }
+		div#document .name, div#document .sectiontitle, div#document .singlecolumn {word-wrap:break-word}
+        div#document .address .adrsDetails {word-break:normal;word-wrap:break-word}
+        div#document .adnlLnks {margin-left:0!important}
+        div#document .address, div#document .adnlLnks {word-break:break-all; word-break:break-word} /* break-all for Firefox */
+        div#document .jobline ul {margin-top:3px}
+        div#document div[id^ = "CONTAINER"]{min-height:20px;}
+        div#document .timeline {padding-left:20px; margin-left:0px !important;}
+        div#document .timeline:after{content:''; width:5px; height:5px; display:block; top:3px; position:absolute; left:-5px; border-radius:50%; border:2px solid #305fec; background:#fff;}
+		div#document .experience .firstparagraph .timeline:before, div#document .education .firstparagraph .timeline:before {content:''; width:2px; height:5px; display:block; top:0px; position:absolute; left:-1px; color:#fff; background:#fff;}
+		div#document .education, div#document .experience {border-left:1px solid #d0d0d0; margin-left:4px; position:relative; z-index:9;}
+		div#document .borderClass{visibility:hidden}
+		div#document.RHS .sectHide, div#document.RHF .sectHide { display:none;}
+		
+		.clearfix:after { display:table; clear:both; content:""; }
+		div#document .section.namesection { z-index:9 !important; width:calc(100% - 110px); }
+		div#document .section.namesection .paragraph {  }
+		div#document .name {font-family:'DM Serif Display' !important; text-transform:capitalize; }
+		div#document .section.photo-cv { z-index:3 !important; margin-bottom:0px; border:0; padding:0; }
+		div#document .photo-cv .img-wrap { position:relative; }
+		div#document .photo-cv div.default-photo { position:absolute; width:103px; height:103px; bottom:-24px; right:0; border-radius:50%; background:url('data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QMraHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjY0NDU5QzczQjU1MDExRUE4MEZCQzU0NEM3M0M1OTM0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjY0NDU5Qzc0QjU1MDExRUE4MEZCQzU0NEM3M0M1OTM0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NjQ0NTlDNzFCNTUwMTFFQTgwRkJDNTQ0QzczQzU5MzQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NjQ0NTlDNzJCNTUwMTFFQTgwRkJDNTQ0QzczQzU5MzQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAABAQEBAQEBAQEBAQEBAQEBAQEB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'); }
+		div#document .photo-cv div.default-photo img { display:inline-block; width:100%; border-radius:50%;  }
+		div#document .SECTION_CNTC path { fill:#305fec; }
+		@-moz-document url-prefix() { 
+			div#document .right-box .section {border:1pt solid #d0d0d0;}
+			div#document .section.photo-cv { border:0; }
+			div#document .education, div#document .experience { border-left:1pt solid #d0d0d0; }
+			div#document .experience .firstparagraph .timeline:before, div#document .education .firstparagraph .timeline:before {content:''; width:3px; height:5px; display:block; top:0px; position:absolute; left:-2px; color:#fff; background:#fff;}
+		}
+		div#document.RH .SECTION_CNTC .FR-ES, div#document.RHU .SECTION_CNTC .FR-ES, div#document.RG .SECTION_CNTC .FR-ES, div#document.RGU .SECTION_CNTC .FR-ES, div#document.RHK .SECTION_CNTC .FR-ES { display:none; }
+		div#document.RHF .SECTION_CNTC .RHU-RG-UK, div#document.RHS .SECTION_CNTC .RHU-RG-UK { display:none; }
+		div#document .SECTION_ADDC table, th, td { border-collapse: collapse; vertical-align:middle; box-sizing: border-box; }
+		div#document .SECTION_ADDC table th.gender-svg { padding-left:4px; }
+		div#document .SECTION_ADDC table td span { color:#000; word-break:break-all; }
+		div#document .right-box .SECTION_ADDC  { padding:0 18px 27px!important; border-top:0px!important; background-color:#fff; }
+		div#document .left-box .SECTION_ADDC  { padding:0 0 27px!important; border-top:0px!important; background-color:#fff; }
+		div#document .SECTION_ADDC table th:first-child, div#document .SECTION_ADDC table td:first-child, div#document .SECTION_ADDC table td:first-child, div#document .SECTION_CNTC .displaytablecell.FR-ES:nth-child(2) { width:20px; }
+		div#document .left-box .combSection .section:first-child, div#document .right-box .combSection .section:first-child { margin-top:0!important; }
+	</style><style type="text/css" id="unparsed">
+        div#document, div#document table{line-height:{$FTLH}px}
+        div#document.pagesize{width:{$DOCW}px}
+        div#document.fontsize, div#document.fontsize table{font-size:{$FTSZ}px}
+        div#document.fontface {font-family:{$FTFC}}
+        div#document.vmargins .left-box, div#document.vmargins .right-box {padding-bottom:{$TBMR}px}
+		div#document.vmargins #CONTAINER_0 {padding-top:{$TBMR}px;}
+        div#document.hmargins{padding-left:{$LRMR}px;padding-right:{$LRMR}px}
+        div#document .section {margin-bottom:{$SCSP}px; box-sizing:border-box;}
+		div#document .heading {margin-bottom:{$SHMB}px; color:{$SDCL};}
+        div#document .sectiontitle{font-size:{$HDSZ}px;line-height:{$HDLH}px; color:{$SDCL};}
+        div#document .paragraph{margin-top:{$PSPC}px}
+        div#document .singlecolumn, div#document .maincolumn {margin-left:{$SCML}px;}
+        div#document .name {font-size:{$NMSZ}px; line-height:{$NMLH}px}
+		div#document .education, div#document .experience { margin-left:{$SCML}px; }
+		div#document .left-box .section:first-child, .right-box .section:first-child {margin-top:-{$TBMR}px}
+		div#document .left-box, .right-box {padding-top:{$TBMR}px;padding-bottom:{$TBMR}px}
+		div#document .timeline:after{border:2px solid {$SDCL}; }
+		div#document .SECTION_CNTC path, div#document .SECTION_ADDC path { fill:{$SDCL};}
+		div#document .parentContainer .right-box .section.SECTION_ADDC {margin-top:-{$MRGT}px}
+		div#document .parentContainer .left-box .section.SECTION_ADDC {margin-top:-{$SCSP}px}
+    </style><style type="text/css" id="dynamic">
+        div#document, div#document table{line-height:15px}
+        div#document.pagesize{width:511px}
+        div#document.fontsize, div#document.fontsize table{font-size:10px}
+        div#document.fontface {font-family:Source Sans Pro}
+        div#document.vmargins .left-box, div#document.vmargins .right-box {padding-bottom:32px}
+		div#document.vmargins #CONTAINER_0 {padding-top:32px;}
+        div#document.hmargins{padding-left:42px;padding-right:42px}
+        div#document .section {margin-bottom:25px; box-sizing:border-box;}
+		div#document .heading {margin-bottom:5px; color:#305fec;}
+        div#document .sectiontitle{font-size:15px;line-height:20px; color:#305fec;}
+        div#document .paragraph{margin-top:10px}
+        div#document .singlecolumn, div#document .maincolumn {margin-left:0px;}
+        div#document .name {font-size:34px; line-height:40px}
+		div#document .education, div#document .experience { margin-left:0px; }
+		div#document .left-box .section:first-child, .right-box .section:first-child {margin-top:-32px}
+		div#document .left-box, .right-box {padding-top:32px;padding-bottom:32px}
+		div#document .timeline:after{border:2px solid #305fec; }
+		div#document .SECTION_CNTC path, div#document .SECTION_ADDC path { fill:#305fec;}
+		div#document .parentContainer .right-box .section.SECTION_ADDC {margin-top:-52px}
+		div#document .parentContainer .left-box .section.SECTION_ADDC {margin-top:-25px}
+    </style>
+                    </head>
+                    <body><div id="document" class="RHK fontsize fontface vmargins hmargins pagesize greetingsphoto-skn"><div id="CONTAINER_PARENT_0"><div id="CONTAINER_0" class="clearfix"><div id="SECTION_NAME131074889" class="section notdraggable namesection firstsection">
+					<div class="borderClass"></div>
+                    <div id="PARAGRAPH_131074889_1" class="paragraph PARAGRAPH_NAME firstparagraph">						
+                        <div class="name">
+                            <span class="visHid"><span class="sectHide">Hi, I'm </span></span><span class="field visHid" id="131074889FNAM0">COLLINS</span><span> </span><span class="field last-name visHid" id="131074889LNAM0">KIPTOO</span><span class="visHid"><span class="sectHide">.</span></span>
+                        </div>
+                    </div>
+
+                </div></div></div><div id="CONTAINER_PARENT_1" class="parentContainer"><div id="CONTAINER_1" class="left-box last-box"><div id="SECTION_SUMM131074892" class="section">
+                    <div class="heading">
+                        <div class="sectiontitle" id="SECTNAME_SUMM131074892">Professional summary</div>
+                    </div>
+                    <div class="paragraph firstparagraph" id="PARAGRAPH_131074892_1">
+                        <div class="field singlecolumn" id="131074892FRFM0"><p>Computer Science student with a major in Software development and data science. Dedicated to learning new skills and implementing new strategies in my career. Expert in Front End web development using react, HTML5, cascading style sheets, and bootstraps. Intermediate knowledge in backend development with diverse tools like PHP, Django, .Net Programming, and python. Excellent communication skills and works well with a team.</p></div>
+                    </div>
+
+                </div><div id="SECTION_EXPR131074893" class="section">
+                    <div class="heading">
+                        <div class="sectiontitle" id="SECTNAME_EXPR131074893">Experience</div>
+                    </div>
+					<div class="experience">
+						<div class="paragraph wordPadding firstparagraph" id="PARAGRAPH_131074893_1">
+							<div class="singlecolumn timeline">
+								<span class="paddedline circle-align">
+									<span class="jobtitle txtBold" id="131074893JTIT0">PART-TIME SYSTEM ADMIN</span><span class="space"></span>
+									<span class="datesWrapper">
+										<span class="jobdates" id="131074893JSTD0" format="%b %Y">Jul 2021</span><span> ‐ </span><span class="jobdates" id="131074893EDDT0" format="%b %Y">Current</span>
+									</span>
+								</span>
+								<span class="paddedline">
+									<span class="companyname datesWrapper" id="131074893COMP0">KAREN FAMILY MART</span><span><span>, </span></span> 
+									<span class="datesWrapper">
+										<span class="joblocation" id="131074893JCIT0">NAIROBI</span>
+										<span class="joblocation" id="131074893JSTA0"></span>
+										<span class="joblocation" id="131074893JCNT0"></span>
+									</span>
+								</span>
+								<span class="paddedline">
+									<span class="jobline" id="131074893JDES0"><ul><li>Worked to continuously improve the performance, reliability, and accuracy of data systems.</li><li>Implemented effective inventory management processes.</li><li>Investigated and troubleshot problems swiftly and improved functionality.</li><li>Applied skills and knowledge to accomplish set performance goals.</li><li>Stayed abreast of the latest technology developments.</li><li>Identified, diagnosed, and resolved connectivity, reliability, and performance-related issues on ICT system infrastructure.</li><li>Increased productivity and efficiency by integrating <span class="ttc_token">Microsoft Dynamics RMS and QuickBooks</span> to perform <span class="ttc_token">Sales and accounts</span>.</li><li>Configured, installed, maintained, and upgraded physical and virtual servers, storage systems, and backup systems.</li></ul></span>
+								</span>
+							</div>
+						</div>
+
+					</div>
+                </div><div id="SECTION_EDUC131074894" class="section">
+                    <div class="heading">
+                        <div class="sectiontitle" id="SECTNAME_EDUC131074894">Education</div>
+                    </div>
+					<div class="education">
+						<div class="paragraph wordPadding firstparagraph" id="PARAGRAPH_131074894_1">
+							<div class="singlecolumn timeline">
+								<span class="paddedline circle-align">
+									<span class="degree txtBold" id="131074894DGRE0" dependency="DGRE">Bachelor of Science</span><span class="txtBold"> - </span>
+									<span class="programline txtBold" id="131074894STUY0" dependency="STUY">Computer Science</span>								
+								</span>
+								<span class="paddedline datesWrapper">
+									<span class="jobdates" id="131074894GRYR0" format="%b %Y">Oct 2023</span>
+								</span>
+								<span class="paddedline">
+									<span class="companyname companyname_educ" id="131074894SCHO0" dependency="SCHO">The Catholic University of Eastern Africa</span><span><span>, </span></span>
+									<span class="datesWrapper">
+										<span class="joblocation" id="131074894SCIT0">Nairobi</span>
+										<span class="joblocation" id="131074894SSTA0"></span>
+										<span class="joblocation" id="131074894SCNT0"></span>
+									</span>
+								</span>								
+								<span class="paddedline">
+									<span class="field" id="131074894FRFM0"><ul><li>Member, <span class=""><span class="ttc_token">Google Developer Student Club</span></span>.</li><li><span class=""><span class="ttc_token">AI/Machine Learning lead and Events coordinator</span></span>, Google Developer Student Club.</li></ul></span>
+								</span>
+							</div>
+						</div>
+<div class="paragraph wordPadding" id="PARAGRAPH_131074894_2">
+							<div class="singlecolumn timeline">
+								<span class="paddedline circle-align">
+									<span class="degree txtBold" id="131074894DGRE1" dependency="DGRE">KCSE certificate</span><span class="txtBold"> - </span>
+									<span class="programline txtBold" id="131074894STUY1" dependency="STUY">High school certification</span>								
+								</span>
+								<span class="paddedline datesWrapper">
+									<span class="jobdates" id="131074894GRYR1" format="%b %Y">Nov 2018</span>
+								</span>
+								<span class="paddedline">
+									<span class="companyname companyname_educ" id="131074894SCHO1" dependency="SCHO">Chewoyet High School</span><span><span>, </span></span>
+									<span class="datesWrapper">
+										<span class="joblocation" id="131074894SCIT1">Kapenguria</span>
+										<span class="joblocation" id="131074894SSTA1"></span>
+										<span class="joblocation" id="131074894SCNT1"></span>
+									</span>
+								</span>								
+								<span class="paddedline">
+									<span class="field" id="131074894FRFM1"><ul><li>Graduated with B- overall grade.</li><li>Member, ICT club.</li><li>Member, Journalism Club.</li></ul></span>
+								</span>
+							</div>
+						</div>
+
+					</div>
+                </div></div><div id="CONTAINER_2" class="right-box last-box"><div id="SECTION_PICT131074891" class="section photo-cv firstsection">
+					<div id="PARAGRAPH_131074891_1" class="paragraph firstparagraph">
+						<div class="img-wrap">
+							<div class="field default-photo" id="131074891PURL0"><img src="https://www.cvhelp.co.uk/profilepics-uk/d32dcd5e-4964-4667-bcd4-3f514c404356.jpeg" alt="" /></div>
+						</div>
+					</div>
+
+				</div><div id="SECTION_CNTC131074890" class="section SECTION_CNTC">
+					
+                    <div class="heading">
+                        <div class="sectiontitle" id="SECTNAME_CNTC131074890">Contact</div>
+                    </div>
+                    <div id="PARAGRAPH_131074890_1" class="paragraph PARAGRAPH_CNTC firstparagraph">
+                        <div class="address singlecolumn">
+                            <div class="displaytable">
+                                <span class="displaytablecell">
+                                    <span class="">
+                                        <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512">
+											<path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z" xmlns="http://www.w3.org/2000/svg"></path>
+										</svg>
+                                    </span>
+                                </span>
+								<span class="field displaytablecell" id="131074890HPHN0">+254722545735</span>
+                            </div>
+                            <div class="displaytable">
+								<span class="displaytablecell">
+									<span class="">
+                                        <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" y="3">
+											<path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z" xmlns="http://www.w3.org/2000/svg"></path>
+										</svg>
+                                    </span>
+								</span>
+								<span class="field displaytablecell" id="131074890EMAI0">collinskandie1@gmail.com</span>
+                            </div>
+                            <div class="displaytable">
+								<span class="displaytablecell RHU-RG-UK">
+									<svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+										<path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z" xmlns="http://www.w3.org/2000/svg"></path>
+									</svg>
+								</span>
+								<span class="displaytablecell FR-ES">
+									<svg x="30" y="224" width="12" height="13" viewbox="0 0 576 512">
+										<path fill="#000" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path>
+									</svg>
+								</span>
+								<span class="displaytablecell RHU-RG-UK">
+									<span class="field" id="131074890STRT0" dependency="STRT">24874 - 00100</span><span><span>,</span></span>
+									<span class="spaced field" id="131074890CITY0">NAIROBI</span><span><span>,</span></span>
+									<span class="spaced field" id="131074890STAT0"></span>
+									<span class="spaced field" id="131074890ZIPC0">00100</span>
+									<span class="spaced field" id="131074890CNTY0"></span>
+								</span>
+								<span class="displaytablecell FR-ES">
+									<span class="paddedline"><span class="field" id="131074890STRT0" dependency="STRT">24874 - 00100</span><span><span>,</span></span></span>
+									<span class="spaced field" id="131074890ZIPC0">00100</span>
+									<span class="spaced field" id="131074890CITY0">NAIROBI</span>
+									<span class="spaced field" id="131074890STAT0"></span>
+									<span class="spaced field paddedline" id="131074890CNTY0"></span>
+								</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><div id="SECTION_HILT131074895" class="section">					
+                    <div class="heading">
+                        <div class="sectiontitle" id="SECTNAME_HILT131074895">Skills</div>
+                    </div>
+                    <div class="paragraph  firstparagraph" id="PARAGRAPH_131074895_1">
+                        <div class="singlecolumn maincolumn">
+                            <div class="field twocol" id="131074895SKC10"><ul><li>JavaScript</li><li>App development</li></ul><ul><li>Full-stack development</li><li>Website optimisation</li></ul><ul><li>Back end integration</li><li>SQL Server</li></ul><ul><li>React</li><li>PHP</li></ul></div>
+                        </div>
+                    </div>
+
+                </div><div id="SECTION_OTHR131079131" class="section">
+                    <div class="heading">
+                        <div class="sectiontitle" id="SECTNAME_OTHR131079131">REFEREES</div>
+                    </div>
+                    <div class="paragraph  firstparagraph" id="PARAGRAPH_131079131_1">
+                        <div class="field singlecolumn" id="131079131FRFM0"><p><b>Edward Kioko</b></p><p><i>HOD Computer Science, Catholic University</i></p><p>kioko@cuea.edu</p><p>0725695782</p><p><b>Ambros Ongere</b></p><p><i>HOS Computer Studies, Chewoyet High School</i></p><p>0724392316</p></div>
+                    </div>
+
+                </div></div></div></div></body>
+                  </html>
